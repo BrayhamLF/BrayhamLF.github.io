@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/Resource/img/fondo2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    background-color: #fcfcfcf5;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px solid #0a0e41;
+    max-width: 300px;
+    width: 100%;
+    color: #000000;
+}
+
+.contenedor h2, h3 {
+    text-align: center;
+}
+
+.contenedor h2{
+    color: #29555a;
+}
+        
+.contenedor input[type="text"], .contenedor input[type="password"] {
+    width: 100%;
+    padding: 7px;
+    margin: 7px 0;    
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+        
+.button-singup {
+    background-color: #6bda6f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+.button-singup:hover {
+    background-color: #9ddea0;
+}
+
+.button-login {
+    background-color: #525d98;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+.button-login:hover {
+    background-color: #7b87d7;
+}
+
+.button-google {
+    background-color: #b64237;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+.button-google:hover {
+    background-color: #e8796f;
+}
+
+.a {
+    background-color: #ffffff;
+}
