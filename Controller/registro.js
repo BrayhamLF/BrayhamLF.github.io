@@ -1,35 +1,42 @@
-import {registerauth} from './firebase.js'
+import {registerauth, verification} from './firebase.js'
 
-const save_auth = document.getElementById('rgsbtn')
+const formulario = document.getElementById('LogUp-Form')
+const boton = document.getElementById('rgsbtn')
+
 
 async function register(){
 
-    const email = document.getElementById('email').value
-    const psw = document.getElementById('password').value
+    const email = formulario['email'].value
+    const psw = formulario['password'].value
+    const confirmEmail = formulario['confirmEmail'].value
+    const confirmPassword = formulario['confirmPassword'].value
 
-    const validar = registerauth(email, psw)
+    const validar = registerauth(email, psw, confirmEmail, confirmPassword)
     const verificar = await validar
 
     .then((verificar) => {
 
+        verification()
+
         alert('Register ' + email + ' succefull')
         const user = verificar.user;
+        window.location.href="/Templates/Registrarse.html"
 
     })
     .catch((error) => {
 
-        alert('Not Succefull')
+        alert('Not Succefull '+email)
 
         const errorCode = error.code;
         const errorMesagge = error.mesagge
 
     })
 
-
 }
 
-window.addEventListener('DOMContentLoaded', async()=>{
-    save_auth.addEventListener('click', register)
+boton.addEventListener( 'click', (e) =>{
+    e.preventDefault()
+    register()
 })
 
 document.getElementById("exitbtn").addEventListener("click", function() {

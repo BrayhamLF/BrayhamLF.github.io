@@ -1,11 +1,12 @@
 import{loginauth} from "../Controller/firebase.js"
 
-const recibir = document.getElementById("loginbtn")
+const formulario = document.getElementById('LogIn-Form')
+const boton = document.getElementById("loginbtn")
 
 async function validar(){
 
-    const email = document.getElementById('edtemail').value
-    const password = document.getElementById('edtpassword').value
+    const email = formulario['edtemail'].value
+    const password = formulario['edtpassword'].value
 
     const verificar = loginauth(email,password)
     const validation = await verificar
@@ -13,7 +14,7 @@ async function validar(){
     if (validation != null){
 
         alert("user authentication succesfull "+email)
-        window.location.href="./Templates/Home.html"
+        window.location.href="/Templates/Home.html"
 
     } 
     else{
@@ -24,6 +25,9 @@ async function validar(){
     }
 }
 
-window.addEventListener('DOMContentLoaded', async()=>{
-    recibir.addEventListener('click', validar)
+boton.addEventListener( 'click', (e)=>{
+
+    e.preventDefault()
+    validar()
+
 })

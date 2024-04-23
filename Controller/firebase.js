@@ -7,8 +7,9 @@ import {
   onAuthStateChanged,
   signOut,
   signInWithPopup,
-  sendEmailVerification 
-
+  sendEmailVerification,
+  sendPasswordResetEmail,
+  deleteUser
 } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js'
 
 
@@ -25,10 +26,11 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const user = auth.currentUser;
 
 //Métdo de Registro de Usario
-export const registerauth = (email, password) =>
-  createUserWithEmailAndPassword(auth, email, password)
+export const registerauth = (email,confirmEmail, password, confirmPassword) =>
+  createUserWithEmailAndPassword(auth, email,confirmEmail, password, confirmPassword)
 
 //Verifacion por correo
 export const verification = () =>
@@ -40,6 +42,10 @@ export const loginauth = (email, password) =>
 
 // Método Inicion Sesion Google
 export const googleauth = (provider) =>
+  signInWithPopup(auth, provider)
+
+// Método Inicion Sesion Google
+export const facebookauth = (provider) =>
   signInWithPopup(auth, provider)
 
 // Estado del Usuario logeado
@@ -56,7 +62,15 @@ export function userstate(){
   });
 }
 
+//Restablecer contraseña por correo
+export const recoverypass = (email) =>
+  sendPasswordResetEmail(auth, email)
+
 // Cerrar sesion del usuario
 export const loginout = () =>
   signOut(auth)
+
+//Eliminar usuario
+export const deleteuser = () =>
+  deleteUser(user)
 
