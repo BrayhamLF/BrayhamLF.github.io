@@ -1,0 +1,53 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/Resource/img/fondo3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card-title {
+    color: #0d7345;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+.btn-primary:hover {
+    background-color: #126534;
+    border-color: #267a49;
+}
+
+.form-text {
+    color: #6c757d;
+}
+
+#backbtn {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #333;
+}
+
+#backbtn:hover {
+    background-color: #999;
+    border-color: #999;
+    color: #fff;
+}

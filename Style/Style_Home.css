@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Courier New", Courier, monospace;
     background-image: url('/Resource/img/fondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-button {
+#btnlogout {
     padding: 10px 20px;
     font-size: 18px;
     background-color: #163f47;
@@ -39,6 +39,21 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+#btnlogout:hover {
     background-color: #43595a;
+}
+
+#btndelete {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #471916;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btndelete:hover {
+    background-color: #be4949;
 }

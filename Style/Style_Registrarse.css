@@ -1,5 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
     background-image: url('/Resource/img/fondo1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,18 +11,28 @@ body {
     height: 100vh;
 }
 
-.contenedor {
+.card {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #8e898977;
+    background-color: #8e8989b3;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(236, 103, 41, 0.344);
+    box-shadow: 0 0 10px #3d383899;
 }
 
-h2 {
+.card-body input[type="text"],
+.card-body input[type="password"] {
+    border-color: #efc583bf;
+}
+
+h1 {
+    font-family: "Courier New", Courier, monospace;
     text-align: center;
-    color: #f9f9f9;
+    color: #eeaa5d;
+}
+
+h3 {
+    font-size: 20px;
 }
 
 input[type="text"],
@@ -34,9 +43,12 @@ input[type="password"]{
     border: 1px solid #000000;
     border-radius: 5px;
     box-sizing: border-box;
+    background-color: rgba(216, 210, 180, 0.7);
+    font-family: "Courier New", Courier, monospace;
+
 }
 
-.button-singup {
+.button-logup {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
@@ -49,40 +61,16 @@ input[type="password"]{
     transition: background-color 0.3s ease;
 }
 
-.button-singup:hover {
+.button-logup:hover {
     background-color: #e5cd65;
 }
 
-.button-verifcar {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #df994e;
-    color: #212121;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button-verifcar:hover {
-    background-color: #e7b094;
-}
-
 .button-exit {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #eb7d6a;
-    color: #212121;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button-exit:hover {
-    background-color: #e59065;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none;
+    color: #d8d2b4;
+    font-family: "Courier New", Courier, monospace;
 }
