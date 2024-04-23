@@ -26,6 +26,7 @@ async function facebook(){
     })
 
 }
+
 window.addEventListener('DOMContentLoaded', async()=>{
     Facebook.addEventListener('click', facebook)
 })

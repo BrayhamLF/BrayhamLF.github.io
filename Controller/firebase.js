@@ -10,7 +10,6 @@ import {
   sendEmailVerification,
   sendPasswordResetEmail,
   deleteUser
-
 } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js'
 
 
@@ -30,8 +29,8 @@ const auth = getAuth(app);
 const user = auth.currentUser;
 
 //Métdo de Registro de Usario
-export const registerauth = (email,confirmEmail, password, confirmPassword) =>
-  createUserWithEmailAndPassword(auth, email,confirmEmail, password, confirmPassword)
+export const registerauth = (email, password) =>
+  createUserWithEmailAndPassword(auth, email, password)
 
 //Verifacion por correo
 export const verification = () =>
@@ -45,7 +44,7 @@ export const loginauth = (email, password) =>
 export const googleauth = (provider) =>
   signInWithPopup(auth, provider)
 
-// Método Inicion Sesion Google
+// Método Inicion Sesion Facebook
 export const facebookauth = (provider) =>
   signInWithPopup(auth, provider)
 
@@ -72,7 +71,6 @@ export const loginout = () =>
   signOut(auth)
 
 //Eliminar usuario
-export const deleteuser = () =>
+export const deleteuser = (user) =>
   deleteUser(user)
 
-export { auth };

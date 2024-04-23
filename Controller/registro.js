@@ -1,43 +1,65 @@
-import {registerauth, verification} from './firebase.js'
+import { registerauth, verification } from './firebase.js';
 
-const formulario = document.getElementById('LogUp-Form')
-const boton = document.getElementById('rgsbtn')
+const formulario = document.getElementById('LogUp-Form');
+const boton = document.getElementById('rgsbtn');
 
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
-async function register(){
+async function register() {
+    
+    const email = formulario['email'].value;
+    const psw = formulario['password'].value;
+    const confirmEmail = formulario['confirmEmail'].value;
+    const confirmPassword = formulario['confirmPassword'].value;
 
-    const email = formulario['email'].value
-    const psw = formulario['password'].value
-    const confirmEmail = formulario['confirmEmail'].value
-    const confirmPassword = formulario['confirmPassword'].value
+    if (!email || !psw || !confirmEmail || !confirmPassword) {
+        alert('Por favor completa todos los campos.');
+        return;
+    }
 
-    const validar = registerauth(email, psw, confirmEmail, confirmPassword)
-    const verificar = await validar
+    if (!emailRegex.test(email) || !emailRegex.test(confirmEmail)) {
+        alert('Por favor ingresa un correo electrónico válido.');
+        return;
+    }
 
-    .then((verificar) => {
+    if (email !== confirmEmail) {
+        alert('Los correos electrónicos no coinciden.');
+        return;
+    }
 
-        verification()
+    if (psw !== confirmPassword) {
+        alert('Las contraseñas no coinciden.');
+        return;
+    }
 
-        alert('Register ' + email + ' succefull')
+    if (!passwordRegex.test(psw) || !passwordRegex.test(confirmPassword)) {
+        alert('La contraseña debe contener al menos 8 caracteres, incluyendo números, letras minúsculas, mayúsculas y caracteres especiales.');
+        return;
+    }
+
+    try {
+
+        const verificar = await registerauth(email, psw);
+
+        verification();
+
+        alert('Registro exitoso para ' + email + '. Correo de Verificacion ha sido enviado.');
         const user = verificar.user;
-        window.location.href="/Templates/Registrarse.html"
+        window.location.href = "/Templates/Registrarse.html";
 
-    })
-    .catch((error) => {
+    } catch (error) {
 
-        alert('Not Succefull '+email)
+        alert('Registro no exitoso para ' + email);
+        console.error(error);
 
-        const errorCode = error.code;
-        const errorMesagge = error.mesagge
-
-    })
-
+    }
 }
 
-boton.addEventListener( 'click', (e) =>{
-    e.preventDefault()
-    register()
-})
+boton.addEventListener('click', (e) => {
+    e.preventDefault();
+    register();
+});
 
 document.getElementById("exitbtn").addEventListener("click", function() {
     window.location.href = "/Index.html";

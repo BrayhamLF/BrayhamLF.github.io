@@ -1,12 +1,12 @@
-import { deleteuser, loginauth, auth } from './firebase.js';
+import { deleteuser, loginauth, auth} from './firebase.js';
 
 const deleteUserForm = document.getElementById('Delete-Form');
 
-deleteUserForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+deleteUserForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email = document.getElementById('edtemail').value;
+    const password = document.getElementById('edtpassword').value;
 
     try {
 
@@ -15,10 +15,12 @@ deleteUserForm.addEventListener('submit', async (e) => {
         await deleteuser(auth.currentUser);
         
         alert('Usuario'+email+' eliminado exitosamente.');
-        window.location.href = "/Index.html"; 
+        window.location.href = "/index.html"; 
 
     } catch (error) {
-        console.error('Error al eliminar usuario: ', error.message);
-        alert('Error al eliminar usuario: ' +  email + error.message);
+
+        console.error('Error al eliminar usuario:' + email, error.message);
+        alert('Error al eliminar usuario: ' + error.message);
+
     }
 });
