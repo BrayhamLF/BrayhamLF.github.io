@@ -10,6 +10,7 @@ import {
   sendEmailVerification,
   sendPasswordResetEmail,
   deleteUser
+
 } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js'
 
 
@@ -74,3 +75,4 @@ export const loginout = () =>
 export const deleteuser = () =>
   deleteUser(user)
 
+export { auth };

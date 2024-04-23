@@ -1,24 +1,29 @@
-import{userstate, deleteuser} from "../Controller/firebase.js"
+import { deleteuser, loginauth, auth } from './firebase.js';
 
-userstate()
+const deleteUserForm = document.getElementById('Delete-Form');
 
-const eliminar = document.getElementById('btndelete')
+deleteUserForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-async function eliminarusuario(){
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-    const verificar=deleteuser()
-    const comprobar = await verificar
+    try {
 
-    .then((comprobar)=>{
-        alert('Usuario eliminado correctamente.')
-        window.location.href="../Index.html"
-    })
-    .catch((error)=>{
+        await loginauth(email, password);
+
+        await deleteuser(auth.currentUser);
         
-        alert('No se ha podido eliminar el usuario.')
-    })
-}
+        alert('Usuario'+email+' eliminado exitosamente.');
+        window.location.href = "/Index.html"; 
 
-window.addEventListener('DOMContentLoaded', async()=>{
-    eliminar.addEventListener('click', eliminarusuario)
-})
+    } catch (error) {
+        console.error('Error al eliminar usuario: ', error.message);
+        alert('Error al eliminar usuario: ' +  email + error.message);
+    }
+});
+
+
+document.getElementById('backbtn').addEventListener('click', () => {
+    window.location.href = "/Index.html";
+});
