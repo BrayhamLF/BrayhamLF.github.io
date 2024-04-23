@@ -22,8 +22,3 @@ deleteUserForm.addEventListener('submit', async (e) => {
         alert('Error al eliminar usuario: ' +  email + error.message);
     }
 });
-
-
-document.getElementById('backbtn').addEventListener('click', () => {
-    window.location.href = "/Index.html";
-});
