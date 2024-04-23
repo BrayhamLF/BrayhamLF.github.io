@@ -57,3 +57,46 @@ h1 {
 #btndelete:hover {
     background-color: #be4949;
 }
+
+.modal-content {
+    background-color: #212134;
+    color: #fff;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.modal-header {
+    background-color: #163f47;
+    color: #fff;
+    border-bottom: none;
+}
+
+.modal-title {
+    color: #0ec673;
+}
+
+.modal-body {
+    background-color: #212134;
+}
+
+.form-label {
+    color: #fff;
+}
+
+.form-control {
+    background-color: #2d2d3d;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #be4949;
+    border-color: #be4949;
+}
+
+.btn-primary:hover {
+    background-color: #a43434;
+    border-color: #a43434;
+}
+
+.btn-close {
+    color: #fff;
+}
