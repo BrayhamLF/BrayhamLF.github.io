@@ -62,5 +62,5 @@ boton.addEventListener('click', (e) => {
 });
 
 document.getElementById("exitbtn").addEventListener("click", function() {
-    window.location.href = "/Index.html";
+    window.location.href = "/index.html";
 });

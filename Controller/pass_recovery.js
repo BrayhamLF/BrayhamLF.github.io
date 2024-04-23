@@ -33,5 +33,5 @@ boton.addEventListener('click', async(e)=>{
 })
 
 exit.addEventListener('click', function() {
-    window.location.href = "/Index.html";
+    window.location.href = "/index.html";
 })

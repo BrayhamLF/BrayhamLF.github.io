@@ -12,7 +12,7 @@ async function cerrarsesion(){
 
     .then((comprobar)=>{
         alert('Sesion Cerrada')
-        window.location.href="../Index.html"
+        window.location.href="../index.html"
     })
     .catch((error)=>{
         
