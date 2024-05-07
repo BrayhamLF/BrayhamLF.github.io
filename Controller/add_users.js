@@ -1,6 +1,6 @@
 import {addregister} from './firebase.js'
 
-const agregar = document.getElementById('addbtn')
+const boton = document.getElementById('rgsbtn')
 const salir = document.getElementById('exitbtn')
 
 async function Agregar(){
@@ -21,7 +21,7 @@ async function Agregar(){
     .then((validar) => {
         
         alert('Usuario ' + nombre + ' con el email '+ email +' fue guardado exitosamente')
-        window.location.href="/Templates/Registro_Productos.html"
+        window.location.href="/Templates/Registrarse.html"
 
     })
     .catch((error) => {
@@ -36,7 +36,7 @@ async function Agregar(){
 }
 
 window.addEventListener('DOMContentLoaded', async()=>{
-    agregar.addEventListener('click', Agregar)
+    boton.addEventListener('click', Agregar)
 })
 
 salir.addEventListener('click', function() {
