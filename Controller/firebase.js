@@ -90,14 +90,15 @@ export { auth };
 // Métodos de Firestore Database
 
 // Agregar Datos
-export const addregister = (nombre, fecha, cedula, telefono, direccion, email) =>
-  addDoc(collection(db, "productos"), {
+export const addregister = (nombres, apellidos, fecha, cedula, telefono, direccion, email) =>
+  addDoc(collection(db, "Usuarios"), {
 
-    nombre,
-    fecha,
-    cedula,
-    telefono,
-    direccion,
-    email
+    nombre: nombres,
+    apellido: apellidos,
+    fecha: fecha,
+    cedula: cedula,
+    telefono: telefono,
+    direccion: direccion,
+    email: email
 
   });

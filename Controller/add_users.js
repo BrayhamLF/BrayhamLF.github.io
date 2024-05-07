@@ -5,17 +5,15 @@ const salir = document.getElementById('exitbtn')
 
 async function Agregar(){
 
-    const nombre = document.getElementById('edtnom')
-    const fecha = document.getElementById('edtfecha')
-    const cedula = document.getElementById('edtcc')
-    const telefono = document.getElementById('edttlf')
-    const direccion = document.getElementById('edtdirec')
-    const email = document.getElementById('edtemail')
+    const nombre = document.getElementById('edtnom').value;
+    const apellidos = document.getElementById('edtape').value;
+    const fecha = document.getElementById('edtfecha').value;
+    const cedula = document.getElementById('edtcc').value;
+    const telefono = document.getElementById('edttlf').value;
+    const direccion = document.getElementById('edtdirec').value;
+    const email = document.getElementById('edtemail').value;
 
-
-
-
-    const verificar = addregister(nombre, fecha, cedula, telefono, direccion, email)
+    const verificar = addregister(nombre, apellidos, fecha, cedula, telefono, direccion, email)
     const validar = await verificar
 
     .then((validar) => {
