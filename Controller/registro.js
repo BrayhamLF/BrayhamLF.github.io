@@ -46,6 +46,8 @@ async function register() {
 
         alert('Registro exitoso para ' + email + '. Correo de Verificacion ha sido enviado.');
         const user = verificar.user;
+        window.location.href="/index.html"
+
 
     } catch (error) {
 

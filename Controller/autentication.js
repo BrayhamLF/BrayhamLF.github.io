@@ -11,18 +11,20 @@ async function validar(){
     const verificar = loginauth(email,password)
     const validation = await verificar
 
-    if (validation != null){
-
+    .then((validar) => {
+        
         alert("user authentication succesfull "+email)
         window.location.href="/Templates/Home.html"
-
-    } 
-    else{
+    })
+    .catch((error) => {
 
         console.log("Sesion "+email+" not validation")
         alert("Error de usuario verifique usuario y/o contraseña")
 
-    }
+        const errorCode = error.code;
+        const errorMesagge = error.mesagge
+
+    })
 }
 
 boton.addEventListener( 'click', (e)=>{

@@ -5,26 +5,28 @@ const salir = document.getElementById('exitbtn')
 
 async function Agregar(){
 
-    const nombre = document.getElementById('edtnom').value;
+    const nombres = document.getElementById('edtnom').value;
     const apellidos = document.getElementById('edtape').value;
     const fecha = document.getElementById('edtfecha').value;
     const cedula = document.getElementById('edtcc').value;
+    const estado = document.getElementById('edtstc').value;
+    const rh = document.getElementById('edtrh').value;
+    const genero = document.getElementById('edtgnr').value;
     const telefono = document.getElementById('edttlf').value;
     const direccion = document.getElementById('edtdirec').value;
     const email = document.getElementById('edtemail').value;
 
-    const verificar = addregister(nombre, apellidos, fecha, cedula, telefono, direccion, email)
+    const verificar = addregister(nombres, apellidos, fecha, cedula, estado, rh, genero, telefono, direccion, email)
     const validar = await verificar
 
     .then((validar) => {
         
         alert('Usuario ' + nombre + ' con el email '+ email +' fue guardado exitosamente')
-        window.location.href="/Templates/Registrarse.html"
 
     })
     .catch((error) => {
 
-        alert('Error al agregar el producto')
+        alert('Error al agregar el usuario')
 
         const errorCode = error.code;
         const errorMesagge = error.mesagge
