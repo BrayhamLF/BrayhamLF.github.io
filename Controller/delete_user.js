@@ -16,7 +16,8 @@ deleteUserForm.addEventListener( 'submit' , async (event) => {
         await deleteuser(auth.currentUser);
         
         alert('Usuario eliminado exitosamente.');
-        window.location.href = "/Index.html"; 
+        window.location.href = "/index.html"; 
+
     } catch (error) {
         console.error('Error al eliminar usuario:', error.message);
         alert('Error al eliminar usuario: ' + error.message);
