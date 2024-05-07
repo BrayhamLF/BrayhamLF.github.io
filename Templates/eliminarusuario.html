@@ -12,30 +12,37 @@
 </head>
 
 <body>
+
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title">Eliminar Usuario</h3>
-                        <form id="Delete-Form">
+                        <h3 class="card-title">Borrar Usuario</h3>
+                        <form id="DeleteUser-Form">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Correo Electrónico</label>
-                                <input type="email" class="form-control" id="edtemail" placeholder="Ingrese su correo electrónico" required>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico" required>
+                                <div id="emailHelp" class="form-text">Por favor ingrese su contraseña para eliminar el usuario.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="edtpassword" placeholder="Ingrese su contraseña" required>
+                                <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                                <button type="button" id="show-password">Mostrar contraseña</button> <br>
                             </div>
-                            <button type="submit" id="deletebtn" class="btn btn-danger">Borrar Usuario</button>
+                            <br>
+                            <button type="submit" id="deleteUserBtn" class="btn btn-danger">Borrar Usuario</button>
                         </form>
+                        <button id="backbtn" class="btn btn-secondary">Atrás</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
     <script type="module" src="/Controller/delete_user.js"></script>
+
 </body>
 
 </html>
