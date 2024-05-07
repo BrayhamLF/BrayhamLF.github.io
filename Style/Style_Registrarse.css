@@ -27,9 +27,13 @@ body {
 .card-body input[type="text"],
 .card-body input[type="password"],
 .card-body input[type="email"],
+.card-body input[type="number"],
 #edtname,
 #edtfecha,
 #edtcc,
+#edtstc,
+#edtrh,
+#edtgnr,
 #edttlf,
 #edtdirec {
     width: calc(100% - 22px);
