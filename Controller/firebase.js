@@ -7,10 +7,19 @@ import {
   onAuthStateChanged,
   signOut,
   signInWithPopup,
+  deleteUser,
   sendEmailVerification,
-  sendPasswordResetEmail,
-  deleteUser
+  sendPasswordResetEmail
+  
 } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js'
+import { 
+
+  getFirestore,
+  collection, 
+  addDoc 
+
+} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js"
+
 
 
 const firebaseConfig = {
@@ -26,25 +35,27 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const user = auth.currentUser;
+const db = getFirestore(app)
 
-//Métdo de Registro de Usario
+// Métodos de Autenticacion
+
+// Registro de Usario
 export const registerauth = (email, password) =>
   createUserWithEmailAndPassword(auth, email, password)
 
-//Verifacion por correo
+// Verifacion por correo
 export const verification = () =>
   sendEmailVerification(auth.currentUser)
 
-// Metodo de autenticación de usuario
+// Autenticación de usuario
 export const loginauth = (email, password) =>
   signInWithEmailAndPassword(auth, email, password)
 
-// Método Inicion Sesion Google
+// Inicio Sesion Google
 export const googleauth = (provider) =>
   signInWithPopup(auth, provider)
 
-// Método Inicion Sesion Facebook
+// Inicio Sesion Facebook
 export const facebookauth = (provider) =>
   signInWithPopup(auth, provider)
 
@@ -57,12 +68,12 @@ export function userstate(){
       console.log(uid)
 
     } else {
-      window.location.href='../index.html'
+      window.location.href='../Index.html'
     }
   });
 }
 
-//Restablecer contraseña por correo
+// Restablecer contraseña por correo
 export const recoverypass = (email) =>
   sendPasswordResetEmail(auth, email)
 
@@ -70,7 +81,23 @@ export const recoverypass = (email) =>
 export const loginout = () =>
   signOut(auth)
 
-//Eliminar usuario
+// Eliminar usuario
 export const deleteuser = (user) =>
   deleteUser(user)
 
+export { auth };
+
+// Métodos de Firestore Database
+
+// Agregar Datos
+export const addregister = (nombre, fecha, cedula, telefono, direccion, email) =>
+  addDoc(collection(db, "productos"), {
+
+    nombre,
+    fecha,
+    cedula,
+    telefono,
+    direccion,
+    email
+
+  });

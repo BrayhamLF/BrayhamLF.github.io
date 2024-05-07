@@ -8,7 +8,7 @@ const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
 async function register() {
     
-    const email = formulario['email'].value;
+    const email = formulario['edtemail'].value;
     const psw = formulario['password'].value;
     const confirmEmail = formulario['confirmEmail'].value;
     const confirmPassword = formulario['confirmPassword'].value;
@@ -59,6 +59,21 @@ async function register() {
 boton.addEventListener('click', (e) => {
     e.preventDefault();
     register();
+});
+
+document.getElementById('show-password').addEventListener('click', function() {
+    var passwordField = document.getElementById('password');
+    var confirmPasswordField = document.getElementById('confirmPassword');
+
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        confirmPasswordField.type = 'text';
+        this.textContent = 'Ocultar contraseña';
+    } else {
+        passwordField.type = 'password';
+        confirmPasswordField.type = 'password';
+        this.textContent = 'Mostrar contraseña';
+    }
 });
 
 document.getElementById("exitbtn").addEventListener("click", function() {
