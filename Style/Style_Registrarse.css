@@ -5,15 +5,19 @@ body {
     background-position: center;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+}
+
+.container {
+    margin-top: 50px;
 }
 
 .card {
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 600px;
+    width: 100%;
     padding: 20px;
     background-color: #8e8989b3;
     border-radius: 8px;
@@ -21,23 +25,14 @@ body {
 }
 
 .card-body input[type="text"],
-.card-body input[type="password"] {
-    border-color: #efc583bf;
-}
-
-h1 {
-    font-family: "Courier New", Courier, monospace;
-    text-align: center;
-    color: #eeaa5d;
-}
-
-h3 {
-    font-size: 20px;
-}
-
-input[type="text"],
-input[type="password"]{
-    width: 100%;
+.card-body input[type="password"],
+.card-body input[type="email"],
+#edtname,
+#edtfecha,
+#edtcc,
+#edttlf,
+#edtdirec {
+    width: calc(100% - 22px);
     padding: 10px;
     margin: 8px 0;
     border: 1px solid #000000;
@@ -45,11 +40,18 @@ input[type="password"]{
     box-sizing: border-box;
     background-color: rgba(216, 210, 180, 0.7);
     font-family: "Courier New", Courier, monospace;
-
 }
 
-.button-logup {
-    width: 100%;
+#show-password {
+    width: calc(100% - 22px);
+    margin: 8px 0;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+.button-logup,
+.btn-primary {
+    width: calc(100% - 22px);
     padding: 10px;
     margin: 8px 0;
     border: 1px solid #000000;
@@ -61,7 +63,8 @@ input[type="password"]{
     transition: background-color 0.3s ease;
 }
 
-.button-logup:hover {
+.button-logup:hover,
+.btn-primary:hover {
     background-color: #e5cd65;
 }
 
@@ -71,6 +74,18 @@ input[type="password"]{
     margin: 20px auto;
     text-align: center;
     text-decoration: none;
+    border: 1px solid #000000;
     color: #d8d2b4;
     font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    color: #eeaa5d;
+}
+
+h3 {
+    font-size: 20px;
+    margin-top: 0;
 }

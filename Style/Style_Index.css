@@ -14,7 +14,7 @@ body {
 
 .card {
     border: 1px solid rgba(58, 140, 222, 0.7);
-    background-color: #3471b69a;
+    background-color: #3572b8c2;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -41,10 +41,31 @@ body {
     border-color: #0056b3;
 }
 
+.custom-link.register-link {
+    color: #28a745;
+}
+
+.custom-link.register-link:hover {
+    color: #218838;
+}
+
 .custom-link {
-    color: #f5f5f5; /* Cambio de color para los enlaces */
+    color: #f5f5f5;
 }
 
 .custom-link:hover {
-    text-decoration: none; /* Quita el subrayado al pasar el ratón */
+    text-decoration: none;
+}
+
+#show-password {
+    margin-top: 10px;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+#show-password:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
 }
