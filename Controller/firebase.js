@@ -68,7 +68,7 @@ export function userstate(){
       console.log(uid)
 
     } else {
-      window.location.href='../Index.html'
+      window.location.href='../index.html'
     }
   });
 }
