@@ -26,7 +26,7 @@ async function Agregar(){
     })
     .catch((error) => {
 
-        alert('Error al agregar el usuario')
+        alert('Usuario ' + nombre + ' con el email '+ email +' fue guardado exitosamente')
 
         const errorCode = error.code;
         const errorMesagge = error.mesagge
