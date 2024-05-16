@@ -28,15 +28,15 @@
                                 <input type="password" id="edtpassword" class="form-control" placeholder="Ingresa tu contraseña" required><br>
                             </div>
                             <div class="mt-3 text-center">
-                                <button type="submit" class="btn btn-primary btn-block" id="loginbtn">Iniciar sesión</button> <br>
-                                <button type="button" id="show-password" class="btn btn-secondary">Mostrar contraseña</button> <br> <!-- Convertido a botón de Bootstrap -->
+                                <button type="submit" class="btn btn-primary btn-block" id="loginbtn">Iniciar sesión [Admin]</button> <br>
+                                <br> <button type="submit" class="btn btn-info btn-block" id="loginbtn2">Iniciar sesión [Otro]</button> <br>
+                                <br> <button type="button" id="show-password" class="btn btn-secondary">Mostrar contraseña</button> <br>
                                 <br> <button type="button" id="googlebtn" class="btn btn-danger btn-icon"><i class="fa-brands fa-google fa-sm" style="color: #ffffff;"></i></button>
                                 <button type="button" id="facebookbtn" class="btn btn-primary btn-icon"><i class="fab fa-facebook-f"></i></button>
                             </div>
                             <hr>
                             <div class="text-center">
-                                <p>¿No tienes una cuenta? <a href="/Templates/Registrarse.html" class="text-secondary custom-link register-link">Regístrate aquí</a></p>
-                                <p><a href="/Templates/Recuperarcontraseña.html" class="text-muted custom-link">¿Olvidaste tu contraseña?</a></p>
+                                <p>¿No tienes una cuenta? <a href="/Templates/Registrarse.html" class="text-primary custom-link register-link">Regístrate aquí</a></p>
                             </div>
                         </form>
                     </div>
@@ -49,6 +49,7 @@
     <script src="https://kit.fontawesome.com/6f08425246.js" crossorigin="anonymous"></script>
     
     <script type="module" src="/Controller/autentication.js"></script>
+    <script type="module" src="/Controller/autentication2.js"></script>
     <script type="module" src="/Controller/authgoogle.js"></script>
     <script type="module" src="/Controller/facebook.js"></script>
 </body>
