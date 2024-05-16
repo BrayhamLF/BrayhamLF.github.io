@@ -15,14 +15,16 @@ import {
 import { 
 
   getFirestore,
-  collection, 
-  addDoc 
+  collection,
+  addDoc,
+  getDocs
 
 } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js"
 
 
 
 const firebaseConfig = {
+
   apiKey: "AIzaSyAoecY9UEZzrZx-k3E2TcstI3xbMVFgYkg",
   authDomain: "apiweblogin24g2.firebaseapp.com",
   projectId: "apiweblogin24g2",
@@ -30,12 +32,16 @@ const firebaseConfig = {
   messagingSenderId: "591892579123",
   appId: "1:591892579123:web:056a214bfced8cf951f446",
   measurementId: "G-J9MNYKHY9J"
+
 };
 
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app)
+
+export { auth };
+export { db };
 
 // Métodos de Autenticacion
 
@@ -85,12 +91,10 @@ export const loginout = () =>
 export const deleteuser = (user) =>
   deleteUser(user)
 
-export { auth };
-
 // Métodos de Firestore Database
 
 // Agregar Datos
-export const addregister = (nombres, apellidos, fecha, cedula, estado, rh, genero, telefono, direccion, email) =>
+export const addregister = (nombres, apellidos, fecha, cedula, estado, rh, genero, telefono, direccion, rol, email) =>
   addDoc(collection(db, "Usuarios"), {
 
     nombre: nombres,
@@ -102,6 +106,11 @@ export const addregister = (nombres, apellidos, fecha, cedula, estado, rh, gener
     genero:genero,
     telefono: telefono,
     direccion: direccion,
+    rol:rol,
     email: email
 
   });
+
+// Mostrar Datos
+export const viewusers=()=>
+  getDocs(collection(db, "Usuarios"));

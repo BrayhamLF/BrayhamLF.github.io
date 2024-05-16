@@ -14,9 +14,10 @@ async function Agregar(){
     const genero = document.getElementById('edtgnr').value;
     const telefono = document.getElementById('edttlf').value;
     const direccion = document.getElementById('edtdirec').value;
+    const rol = document.getElementById("edtrol").value;
     const email = document.getElementById('edtemail').value;
 
-    const verificar = addregister(nombres, apellidos, fecha, cedula, estado, rh, genero, telefono, direccion, email)
+    const verificar = addregister(nombres, apellidos, fecha, cedula, estado, rh, genero, telefono, direccion, rol, email)
     const validar = await verificar
 
     .then((validar) => {
@@ -26,7 +27,7 @@ async function Agregar(){
     })
     .catch((error) => {
 
-        alert('Usuario ' + nombre + ' con el email '+ email +' fue guardado exitosamente')
+        alert('Error al guardar el usuario ' + nombre + ' con el email '+ email)
 
         const errorCode = error.code;
         const errorMesagge = error.mesagge

@@ -1,7 +1,7 @@
 import{loginauth} from "../Controller/firebase.js"
 
 const formulario = document.getElementById('LogIn-Form')
-const boton = document.getElementById("loginbtn")
+const boton = document.getElementById("loginbtn2")
 
 async function validar(){
 
@@ -14,7 +14,7 @@ async function validar(){
     .then((validation) => {
         
         alert("user authentication succesfull "+email)
-        window.location.href="/Templates/Home.html"
+        window.location.href="/Templates/Usuarios.html"
     })
     .catch((error) => {
 

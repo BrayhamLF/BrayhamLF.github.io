@@ -4,7 +4,7 @@ userstate()
 
 const sesion = document.getElementById('btnlogout')
 const boton = document.getElementById('btndelete')
-const view = document.getElementById('btnview')
+const recovery = document.getElementById('passbtn')
 
 async function cerrarsesion(){
 
@@ -28,6 +28,6 @@ boton.addEventListener('click', function() {
     window.location.href = "/Templates/eliminarusuario.html";
 })
 
-view.addEventListener('click', function() {
-    window.location.href = "/Templates/VerUsuarios.html";
+recovery.addEventListener('click', function() {
+    window.location.href = "/Templates/Recuperarcontraseña.html";
 })
