@@ -5,6 +5,7 @@ userstate()
 const sesion = document.getElementById('btnlogout')
 const boton = document.getElementById('btndelete')
 const view = document.getElementById('btnview')
+const registrar = document.getElementById('rgsbtn')
 
 async function cerrarsesion(){
 
@@ -22,6 +23,10 @@ async function cerrarsesion(){
 
 window.addEventListener('DOMContentLoaded', async()=>{
     sesion.addEventListener('click', cerrarsesion)
+})
+
+registrar.addEventListener('click', function() {
+    window.location.href = "/Templates/Registrarse.html";
 })
 
 boton.addEventListener('click', function() {
