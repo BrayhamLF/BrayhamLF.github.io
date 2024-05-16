@@ -14,8 +14,9 @@ body {
 
 .card {
     border: 1px solid rgba(58, 140, 222, 0.7);
-    background-color: #3572b8c2;
+    background-color: #2e5d92c2;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    color: #f5f5f5;
 }
 
 .card-header {
@@ -25,32 +26,45 @@ body {
 
 .card-body input[type="text"],
 .card-body input[type="password"]{
-    border-color: #ced4da;
+    border-color: #b8c2cc;
     font-family: "Courier New", Courier, monospace;
+    color: #000;
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #004080;
+    border-color: #004080;
     color: #fff;
     transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #002b59;
+    border-color: #002b59;
+}
+
+.btn-info {
+    background-color: #629cd6;
+    border-color: #629cd6;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-info:hover {
+    background-color: #1e3a58;
+    border-color: #1e3a58;
+    color: #fff;
 }
 
 .custom-link.register-link {
-    color: #28a745;
+    color: #ffffff;
 }
 
 .custom-link.register-link:hover {
-    color: #218838;
+    color: #f0f0f0;
 }
-
 .custom-link {
-    color: #f5f5f5;
+    color: #d9d9d9;
 }
 
 .custom-link:hover {
@@ -59,13 +73,13 @@ body {
 
 #show-password {
     margin-top: 10px;
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: #4d4d4d;
+    border-color: #4d4d4d;
     color: #fff;
     transition: background-color 0.3s ease;
 }
 
 #show-password:hover {
-    background-color: #5a6268;
-    border-color: #5a6268;
+    background-color: #3a3a3a;
+    border-color: #3a3a3a;
 }

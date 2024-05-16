@@ -73,10 +73,40 @@ h1 {
     background-color: #0088cc;
 }
 
-#btnview {
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-image: url('/Resource/img/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #21213493;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #31696f93;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #0ec673;
+    margin-bottom: 20px;
+}
+
+#btnlogout {
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #2c4b52;
+    background-color: #163f47;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -84,6 +114,39 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-#btnview:hover {
-    background-color: #6f9ea3;
+#btnlogout:hover {
+    background-color: #43595a;
 }
+
+#btndelete {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #471916;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btndelete:hover {
+    background-color: #be4949;
+}
+
+#passbtn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4a683d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#passbtn:hover {
+    background-color: #6c8f67;
+}
+
+
+

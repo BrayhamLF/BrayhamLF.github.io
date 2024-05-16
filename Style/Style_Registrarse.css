@@ -35,7 +35,8 @@ body {
 #edtrh,
 #edtgnr,
 #edttlf,
-#edtdirec {
+#edtdirec,
+#edtrol {
     width: calc(100% - 22px);
     padding: 10px;
     margin: 8px 0;

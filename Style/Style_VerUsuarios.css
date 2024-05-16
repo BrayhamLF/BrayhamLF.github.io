@@ -1,0 +1,86 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    background: url('/Resource/img/fondo7.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgb(175, 239, 119);
+    margin-bottom: 20px;
+}
+
+.table {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #63b666;
+    color: #ffffff;
+}
+
+.table td {
+    background-color: #758d93;
+    color: #000000;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #84a27f;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #daf4b7;
+}
+
+#volverbtn {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    background-color: #5ea247;
+    border: 2px solid #5ea247;
+    color: white;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#volverbtn:hover {
+    background-color: #58a75f;
+    border-color: #58a75f;
+}
+
+#volverbtn:active {
+    background-color: #4f852f;
+    border-color: #4f852f;
+}
+
+.container {
+    color: #194b2f;
+    background-color: #a5c593a7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
