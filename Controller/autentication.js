@@ -13,8 +13,18 @@ async function validar(){
 
     .then((validation) => {
         
-        alert("user authentication succesfull "+email)
-        window.location.href="/Templates/Home.html"
+        if (email === "brayhamlindarte.es@unitropico.edu.co" || email === "brayhamlindarte.es@unitropico.edu.co " ){
+
+            alert("user authentication succesfull "+email)
+            window.location.href="/Templates/Home.html"
+
+        }else{      
+
+            alert("user authentication succesfull "+email)
+            window.location.href="/Templates/Usuarios.html"
+            
+        }
+
     })
     .catch((error) => {
 
