@@ -1,4 +1,4 @@
-import { deleteuser, loginauth, auth } from './firebase.js';
+import { deleteuser, loginauth } from './firebase.js';
 
 const deleteUserForm = document.getElementById('DeleteUser-Form');
 
