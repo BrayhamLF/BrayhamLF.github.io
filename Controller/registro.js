@@ -7,7 +7,6 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
 async function register() {
-    
     const email = formulario['edtemail'].value;
     const psw = formulario['password'].value;
     const confirmEmail = formulario['confirmEmail'].value;

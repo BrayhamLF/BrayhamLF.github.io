@@ -1,4 +1,4 @@
-import{loginauth} from "../Controller/firebase.js"
+import{ loginauth } from "../Controller/firebase.js"
 
 const formulario = document.getElementById('LogIn-Form')
 const boton = document.getElementById("loginbtn")

@@ -1,9 +1,8 @@
-import { setregister } from './firebase.js'
+import { updatedata } from './firebase.js';
 
-const boton = document.getElementById('rgsbtn')
-const salir = document.getElementById('exitbtn')
+const boton = document.getElementById('updbtn')
 
-async function Agregar(){
+async function Actualizar(){
 
     const nombres = document.getElementById('edtnom').value;
     const apellidos = document.getElementById('edtape').value;
@@ -14,20 +13,18 @@ async function Agregar(){
     const genero = document.getElementById('edtgnr').value;
     const telefono = document.getElementById('edttlf').value;
     const direccion = document.getElementById('edtdirec').value;
-    const rol = document.getElementById("edtrol").value;
-    const email = document.getElementById('edtemail').value;
 
-    const verificar = setregister(nombres, apellidos, fecha, cedula, estado, rh, genero, telefono, direccion, rol, email)
+    const verificar = updatedata(nombres, apellidos, fecha, cedula, estado, rh, genero, telefono, direccion)
     const validar = await verificar
 
     .then((validar) => {
         
-        alert('Usuario ' + nombres + ' con el email '+ email +' fue guardado exitosamente')
+        alert('Usuario ' + nombres + ' con el email '+ email +' fue actualizado exitosamente')
 
     })
     .catch((error) => {
 
-        alert('Error al guardar el usuario ' + nombres + ' con el email '+ email)
+        alert('Error al actualizar el usuario ' + nombres + ' con el email '+ email)
 
         const errorCode = error.code;
         const errorMesagge = error.mesagge
@@ -37,9 +34,5 @@ async function Agregar(){
 }
 
 window.addEventListener('DOMContentLoaded', async()=>{
-    boton.addEventListener('click', Agregar)
-})
-
-salir.addEventListener('click', function() {
-    window.location.href = "/index.html";
+    boton.addEventListener('click', Actualizar)
 })
