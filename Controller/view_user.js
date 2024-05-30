@@ -14,7 +14,7 @@ async function cargar(cedula = '') {
                     <td>${data.nombres}</td>
                     <td>${data.apellidos}</td>
                     <td>${data.fecha}</td>
-                    <td>${data.id}</td>
+                    <td>${data.cedula}</td>
                     <td>${data.estado}</td>
                     <td>${data.rh}</td>
                     <td>${data.genero}</td>
