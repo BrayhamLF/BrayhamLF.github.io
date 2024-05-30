@@ -2,8 +2,6 @@ body {
     font-family: 'Verdana', sans-serif;
     background: url('/Resource/img/fondo7.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,8 +10,8 @@ body {
     height: 100vh;
 }
 
-h1 {
-    font-size: 2.5rem;
+h3 {
+    font-size: 2rem;
     text-shadow: 2px 2px 4px rgb(175, 239, 119);
     margin-bottom: 20px;
 }
@@ -24,39 +22,44 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: auto;
+    max-width: 100%;
     margin: auto;
 }
 
-.table {
-    background-color: rgba(255, 255, 255, 0.8);
+.table-container {
+    overflow-x: auto;
+}
+
+.table-custom {
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     overflow: hidden;
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.table th, .table td {
+.table-custom th, .table-custom td {
     padding: 10px;
     text-align: left;
 }
 
-.table th {
-    background-color: #63b666;
+.table-custom th {
+    background-color: #6c757d;
     color: #ffffff;
 }
 
-.table td {
-    background-color: #758d93;
+.table-custom td {
+    background-color: #f8f9fa;
     color: #000000;
 }
 
-.table tbody tr:nth-child(even) {
-    background-color: #84a27f;
+.table-custom tbody tr:nth-child(even) {
+    background-color: #e9ecef;
 }
 
-.table tbody tr:nth-child(odd) {
-    background-color: #daf4b7;
+.table-custom tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
 }
 
 #volverbtn {
@@ -85,26 +88,21 @@ h1 {
     border-color: #4f852f;
 }
 
-#searchInput {
-    width: 200px;
-    margin-left: auto;
+#searchCedula {
+    width: 100%;
 }
 
-#searchBtn {
-    margin-left: 10px;
-}
-
-#searchBtn {
+.btn-primary {
     background-color: #007bff;
     border-color: #007bff;
 }
 
-#searchBtn:hover {
+.btn-primary:hover {
     background-color: #0056b3;
     border-color: #0056b3;
 }
 
-#searchBtn:active {
+.btn-primary:active {
     background-color: #004180;
     border-color: #004180;
 }
