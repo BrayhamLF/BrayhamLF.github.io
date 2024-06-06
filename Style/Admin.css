@@ -1,28 +1,23 @@
-/* Admin.css */
-
-/* Estilo general para el cuerpo y el texto */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #e6f0fa, #b3cde8); /* Degradado de azules */
+    background: linear-gradient(to bottom, #e6f0fa, #b3cde8);
     color: black;
-    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    min-height: 100vh;
 }
 
-/* Estilo del encabezado */
 .admin {
     display: flex;
-    justify-content: space-between; /* Ajusta para separar los elementos */
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #d1e0f5; /* Tono pastel de azul */
-    border-bottom: 2px solid #5c6bc0; /* Tono de morado azulado */
+    background-color: #d1e0f5;
+    border-bottom: 2px solid #5c6bc0;
 }
 
-/* Estilo para el botón de cerrar sesión */
 #btnlogout {
-    background-color: #5c6bc0; /* Tono de morado azulado */
+    background-color: #5c6bc0;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -32,11 +27,10 @@ body {
 }
 
 #btnlogout:hover {
-    background-color: #7986cb; /* Tono de morado azulado más claro */
+    background-color: #7986cb;
     color: white;
 }
 
-/* Estilo para el contenedor de los botones */
 .btn-container {
     display: flex;
     justify-content: center;
@@ -44,7 +38,7 @@ body {
 }
 
 .custom-btn {
-    background-color: #5c6bc0; /* Tono de morado azulado */
+    background-color: #5c6bc0;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -55,14 +49,13 @@ body {
 }
 
 .custom-btn:hover {
-    background-color: #7986cb; /* Tono de morado azulado más claro */
+    background-color: #7986cb;
     color: white;
 }
 
-/* Estilo específico para los botones de acciones */
 #btnusuarios,
 #btnproductos {
-    background-color: #5c6bc0; /* Tono de morado azulado */
+    background-color: #5c6bc0;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -74,6 +67,6 @@ body {
 
 #btnusuarios:hover,
 #btnproductos:hover {
-    background-color: #7986cb; /* Tono de morado azulado más claro */
+    background-color: #7986cb;
     color: white;
 }

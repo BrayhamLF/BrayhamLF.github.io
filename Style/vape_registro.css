@@ -5,8 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #c8e6c9, #b2dfdb); /* Degradado de verde */
-    color: #4caf50; /* Tono verde */
+    background: linear-gradient(to bottom, #c8e6c9, #b2dfdb);
+    color: #4caf50;
     font-family: Baskerville, serif;
 }
 
@@ -43,7 +43,7 @@ select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #4caf50; /* Tono verde */
+    border: 1px solid #4caf50;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -52,7 +52,7 @@ button {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #4caf50; /* Tono verde */
+    background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 5px;
@@ -61,5 +61,5 @@ button {
 }
 
 button:hover {
-    background-color: #66bb6a; /* Tono de verde más claro */
+    background-color: #66bb6a;
 }

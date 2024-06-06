@@ -5,10 +5,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #bdd7e7, #a2c7e5); /* Degradado de azules menos intensos */
+    background: linear-gradient(to bottom, #bdd7e7, #a2c7e5);
     background-size: cover;
     background-position: center;
-    color: #004e98; /* Tono de azul menos intenso */
+    color: #004e98;
     font-family: Baskerville, serif;
 }
 
@@ -44,13 +44,13 @@ button {
     width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #004e98; /* Tono azul menos intenso */
+    border: 1px solid #004e98;
     border-radius: 5px;
     font-size: 16px;
 }
 
 button {
-    background-color: #004e98; /* Tono azul menos intenso */
+    background-color: #004e98;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -58,7 +58,7 @@ button {
 }
 
 button:hover {
-    background-color: #003366; /* Tono azul menos intenso más oscuro */
+    background-color: #003366;
 }
 
 #googlebtn,
@@ -68,21 +68,21 @@ button:hover {
 }
 
 #googlebtn {
-    background-color: #004e98; /* Tono azul menos intenso */
+    background-color: #004e98;
     margin-bottom: 10px; 
 }
 
 #googlebtn:hover {
-    background-color: #003366; /* Tono azul menos intenso más oscuro */
+    background-color: #003366;
 }
 
 #facebooklogin {
-    background-color: #003366; /* Tono azul menos intenso más oscuro */
+    background-color: #003366;
     margin-bottom: 10px; 
 }
 
 #facebooklogin:hover {
-    background-color: #00264d; /* Tono azul menos intenso aún más oscuro */
+    background-color: #00264d;
 }
 
 .contenedor > div {

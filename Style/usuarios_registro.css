@@ -5,14 +5,14 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #c5cae9, #b0bec5); /* Degradado de morado grisáceo a morado azulado */
-    color: #4d4398; /* Morado azulado */
+    background: linear-gradient(to bottom, #c5cae9, #b0bec5);
+    color: #4d4398;
     font-family: Baskerville, serif;
 }
 
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Blanco transparente */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 40px;
     border-radius: 10px;
     width: 80%;
@@ -35,20 +35,20 @@ input[type="email"],
 input[type="tel"],
 select,
 button {
-    width: calc(100% - 22px); /* Ajustamos el ancho */
+    width: calc(100% - 22px); 
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #4d4398; /* Morado azulado */
+    border: 1px solid #4d4398;
     border-radius: 5px;
 }
 
 button {
-    background-color: #4d4398; /* Morado azulado */
+    background-color: #4d4398;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #5c6bc0; /* Morado azulado más claro */
+    background-color: #5c6bc0;
 }

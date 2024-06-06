@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: #b0bec5; /* Gris azulado */
+    background-color: #b0bec5;
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -16,7 +16,7 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #78909c; /* Gris azulado más oscuro */
+    box-shadow: 0 0 10px #78909c;
     width: 90%;
     max-width: 1200px;
 }
@@ -24,7 +24,7 @@ body {
 h3 {
     text-align: center;
     margin-bottom: 20px;
-    color: #000; /* Texto en negro */
+    color: #000;
 }
 
 .table-container {
@@ -38,23 +38,23 @@ h3 {
 
 .table-custom th, 
 .table-custom td {
-    border: 1px solid #78909c; /* Gris azulado más oscuro */
+    border: 1px solid #78909c;
     padding: 8px;
     text-align: center;
-    color: #000; /* Texto en negro */
+    color: #000;
 }
 
 .table-custom th {
-    background-color: #556f7a; /* Gris azulado más oscuro */
+    background-color: #556f7a;
     color: white;
 }
 
 .table-custom tbody tr:nth-child(even) {
-    background-color: #b0bec5; /* Gris azulado */
+    background-color: #b0bec5;
 }
 
 .btn-primary {
-    background-color: #556f7a; /* Gris azulado más oscuro */
+    background-color: #556f7a;
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -67,17 +67,17 @@ h3 {
 }
 
 .btn-primary:hover {
-    background-color: #78909c; /* Gris azulado más oscuro */
+    background-color: #78909c;
 }
 
 .modal-content {
     border-radius: 10px;
-    box-shadow: 0 0 10px #455a64; /* Gris azulado más oscuro */
-    color: #000; /* Texto en negro */
+    box-shadow: 0 0 10px #455a64;
+    color: #000;
 }
 
 .modal-header {
-    background-color: #556f7a; /* Gris azulado más oscuro */
+    background-color: #556f7a;
     color: #fff;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -88,16 +88,16 @@ h3 {
 }
 
 .form-label {
-    color: #000; /* Texto en negro */
+    color: #000;
 }
 
 #togglePassword {
-    background-color: #556f7a; /* Gris azulado más oscuro */
+    background-color: #556f7a;
     color: #fff;
 }
 
 .btn-danger {
-    background-color: #2e7d32; /* Verde */
+    background-color: #2e7d32;
     border: none;
     padding: 10px 20px;
     color: white;
@@ -105,5 +105,5 @@ h3 {
 }
 
 .btn-danger:hover {
-    background-color: #005005; /* Verde más oscuro */
+    background-color: #005005;
 }

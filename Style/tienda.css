@@ -120,19 +120,25 @@ body {
 }
 
 .product-card .product-title {
-    color: black; /* Texto en negro */
+    color: black;
     font-size: 1.2em;
     margin: 10px 0;
 }
 
-.product-card .product-price {
-    color: #ff3b3f; /* Tono de rojo */
+.product-card .product-precio {
+    color: #ff3b3f;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.product-card .product-nicotina {
+    color: #ff3b3f;
     font-size: 1.1em;
     margin: 10px 0;
 }
 
 .product-card .add-to-cart {
-    background-color: #ff3b3f; /* Tono de rojo */
+    background-color: #ff3b3f;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -143,6 +149,6 @@ body {
 }
 
 .product-card .add-to-cart:hover {
-    background-color: #ff6c71; /* Tono de rojo más claro */
+    background-color: #ff6c71;
     color: white;
 }

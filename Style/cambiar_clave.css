@@ -5,8 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #b2f7ef, #66b2ff); /* Degradado de verde-azulado a azul */
-    color: #005b99; /* Tono de azul oscuro */
+    background: linear-gradient(to bottom, #b2f7ef, #66b2ff);
+    color: #005b99;
     font-family: Baskerville, serif;
 }
 
@@ -31,7 +31,7 @@ body {
     width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #005b99; /* Tono de azul oscuro */
+    border: 1px solid #005b99;
     border-radius: 5px;
 }
 
@@ -45,19 +45,19 @@ body {
     margin-top: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #66b2ff; /* Tono de azul */
+    background-color: #66b2ff;
     color: white;
     cursor: pointer;
 }
 
 .container button:hover {
-    background-color: #99ccff; /* Tono de azul más claro */
+    background-color: #99ccff;
 }
 
 .container #backbtn {
-    background-color: #66cc99; /* Tono de verde-azulado */
+    background-color: #66cc99;
 }
 
 .container #backbtn:hover {
-    background-color: #99e6b3; /* Tono de verde-azulado más claro */
+    background-color: #99e6b3;
 }

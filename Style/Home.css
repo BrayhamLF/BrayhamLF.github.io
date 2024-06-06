@@ -1,24 +1,19 @@
-/* tienda2.css */
-
-/* Estilo general para el cuerpo y el texto */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #d1c4e9, #b0bec5); /* Degradado de morado azulado a gris */
-    min-height: 100vh; /* Asegura que el degradado cubra toda la altura de la pantalla */
+    background: linear-gradient(to bottom, #d1c4e9, #b0bec5);
+    min-height: 100vh;
     color: black;
 }
 
-/* Estilo del encabezado */
 .usuario {
-    background-color: #d1c4e9; /* Tono pastel de morado azulado */
+    background-color: #d1c4e9;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #5c6bc0; /* Tono de morado azulado */
+    border-bottom: 2px solid #5c6bc0;
 }
 
-/* Estilo para el contenedor de los botones */
 .btn-container {
     display: flex;
     justify-content: center;
@@ -26,7 +21,7 @@ body {
 }
 
 .custom-btn {
-    background-color: #5c6bc0; /* Tono de morado azulado */
+    background-color: #5c6bc0;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -37,11 +32,10 @@ body {
 }
 
 .custom-btn:hover {
-    background-color: #7986cb; /* Tono de morado azulado más claro */
+    background-color: #7986cb; 
     color: white;
 }
 
-/* Estilo de la barra de búsqueda */
 .search-bar {
     display: flex;
     justify-content: center;
@@ -51,16 +45,16 @@ body {
 
 #search-input {
     padding: 10px;
-    border: 2px solid #5c6bc0; /* Tono de morado azulado */
+    border: 2px solid #5c6bc0;
     border-radius: 5px 0 0 5px;
     width: 300px;
 }
 
 #search-btn {
     padding: 10px 20px;
-    border: 2px solid #5c6bc0; /* Tono de morado azulado */
+    border: 2px solid #5c6bc0;
     border-left: none;
-    background-color: #5c6bc0; /* Tono de morado azulado */
+    background-color: #5c6bc0;
     color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
@@ -68,13 +62,12 @@ body {
 }
 
 #search-btn:hover {
-    background-color: #7986cb; /* Tono de morado azulado más claro */
+    background-color: #7986cb;
     color: white;
 }
 
-/* Estilo para el botón de Cambiar Contraseña */
 #btnPassword {
-    background-color: #5c6bc0; /* Tono de morado azulado */
+    background-color: #5c6bc0;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -85,13 +78,12 @@ body {
 }
 
 #btnPassword:hover {
-    background-color: #7986cb; /* Tono de morado azulado más claro */
+    background-color: #7986cb;
     color: white;
 }
 
-/* Estilo para el botón de Cerrar Sesión */
 #btnlogout {
-    background-color: #b71c1c; /* Rojo vino */
+    background-color: #b71c1c;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -102,12 +94,11 @@ body {
 }
 
 #btnlogout:hover {
-    background-color: #8b0000; /* Tono de rojo vino más oscuro */
+    background-color: #8b0000;
 }
 
-/* Estilo para el botón de Eliminar Usuario */
 #btndelete {
-    background-color: #5c6bc0; /* Tono de morado azulado */
+    background-color: #5c6bc0;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -118,13 +109,12 @@ body {
 }
 
 #btndelete:hover {
-    background-color: #7986cb; /* Tono de morado azulado más claro */
+    background-color: #7986cb;
     color: white;
 }
 
-/* Estilo para el botón de Ver Carrito */
 #btnCarrito {
-    background-color: #78909c; /* Gris azulado */
+    background-color: #78909c;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -135,11 +125,10 @@ body {
 }
 
 #btnCarrito:hover {
-    background-color: #546e7a; /* Tono de gris azulado más oscuro */
+    background-color: #546e7a;
     color: white;
 }
 
-/* Estilo del contenedor de los productos */
 .container-items {
     display: flex;
     flex-wrap: wrap;
@@ -147,15 +136,14 @@ body {
     padding: 20px;
 }
 
-/* Estilo de las tarjetas de productos */
 .product-card {
-    background-color: #ffffff; /* Fondo blanco */
-    border: 2px solid #5c6bc0; /* Tono de morado azulado */
+    background-color: #ffffff;
+    border: 2px solid #5c6bc0; 
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
     width: 300px;
-    height: auto; /* Ajuste para que todas las tarjetas tengan la misma altura */
+    height: auto;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -189,19 +177,25 @@ body {
 }
 
 .product-card .product-title {
-    color: black; /* Texto en negro */
+    color: black;
     font-size: 1.2em;
     margin: 10px 0;
 }
 
-.product-card .product-price {
-    color: #5c6bc0; /* Tono de morado azulado */
+.product-card .product-precio {
+    color: #5c6bc0;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.product-card .product-nicotina {
+    color: #5c6bc0;
     font-size: 1.1em;
     margin: 10px 0;
 }
 
 .product-card .add-to-cart {
-    background-color: #5c6bc0; /* Tono de morado azulado */
+    background-color: #5c6bc0;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -212,6 +206,6 @@ body {
 }
 
 .product-card .add-to-cart:hover {
-    background-color: #7986cb; /* Tono de morado azulado más claro */
+    background-color: #7986cb;
     color: white;
 }
