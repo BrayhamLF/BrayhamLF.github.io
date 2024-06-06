@@ -12,10 +12,10 @@
 </head>
 <body>
     <div class="usuario">
-        <h1>Nebula Vapes</h1>
+        <h1>Tienda de usuario</h1>
         <div id="user-name" class="user-name"></div>
         <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Buscar productos..." />
+            <input type="text" id="search-input" placeholder="...Buscar productos..." />
             <button id="search-btn">Buscar</button>
         </div>
 
@@ -23,7 +23,6 @@
             <button type="button" id="btnPassword" class="btn btn-danger custom-btn" onclick="window.location.href='/Templates/Recuperarcontraseña.html'">Cambiar Contraseña</button>
             <button type="button" class="btn btn-danger custom-btn" id="btnlogout">Cerrar Sesión</button>
             <button type="button" class="btn btn-danger custom-btn" id="btndelete" data-bs-toggle="modal" data-bs-target="#deleteUserModal">Eliminar Usuario</button>
-            <!-- Nuevo botón para abrir el modal del carrito -->
             <button type="button" class="btn btn-primary custom-btn" id="btnCarrito" data-bs-toggle="modal" data-bs-target="#cartModal">Ver Carrito</button>
         </div>
     </div>
@@ -31,7 +30,6 @@
     <div class="container-items" id="product-list">
     </div>
 
-    <!-- Modal para mostrar detalles del producto -->
     <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -41,9 +39,9 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="modalProductTitle"></h2>
-                    <p id="modalProductBrand"></p>
-                    <p id="modalProductPrice"></p>
-                    <p id="modalProductDiscountPrice"></p>
+                    <p id="modalProductSabor"></p>
+                    <p id="modalProductPrecio"></p>
+                    <p id="modalProductNicotina"></p>
                     <img id="modalProductImage" src="" alt="Imagen del producto" style="width: 100%;">
                 </div>
                 <div class="modal-footer">
@@ -53,7 +51,6 @@
         </div>
     </div>
 
-    <!-- Modal para eliminar usuario -->
     <div class="modal fade" id="deleteUserModal" tabindex="-1" aria-labelledby="deleteUserModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -81,7 +78,7 @@
         </div>
     </div>
 
-    <!-- Modal para mostrar el carrito del usuario -->
+
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
