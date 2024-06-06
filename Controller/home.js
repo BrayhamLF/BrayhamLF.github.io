@@ -85,7 +85,7 @@ async function cargarCarrito() {
                     </figure>
                     <div class="info-product">
                         <h2>${producto.nombre}</h2>
-                        <p>Marca: ${producto.sabor}</p>
+                        <p>Sabor: ${producto.sabor}</p>
                         <p>Precio: $${producto.precio}</p>
                     </div>
                 `;

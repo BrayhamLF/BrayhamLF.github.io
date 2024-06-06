@@ -26,7 +26,7 @@ async function handleSearch() {
                 </figure>
                 <div class="info-product">
                     <h2 class="product-title">${shoe.nombre}</h2>
-                    <p>Marca: ${shoe.sabor}</p>
+                    <p>Sabor: ${shoe.sabor}</p>
                     <p class="product-price">Precio: ${shoe.precio}</p>
                     <p class="product-price">Nicotina: ${shoe.nicotina}</p>
                     <button class="add-to-cart">Añadir al carrito</button>

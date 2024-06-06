@@ -92,5 +92,5 @@ async function addToCart(shoe, userId) {
     }
 }
 
-// Cargar zapatos cuando la página se haya cargado completamente
+// Cargar vapes cuando la página se haya cargado completamente
 window.addEventListener('DOMContentLoaded', displayShoes);
