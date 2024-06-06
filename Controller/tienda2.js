@@ -26,11 +26,10 @@ export async function fetchShoes() {
     return shoesList;
 }
 
-// Función para mostrar los vapes en el HTML
 async function displayShoes() {
     const shoes = await fetchShoes();
     const productList = document.getElementById('product-list');
-    productList.innerHTML = '';  // Limpiar la lista antes de agregar nuevos elementos
+    productList.innerHTML = '';
     shoes.forEach(shoe => {
         const shoeItem = document.createElement('div');
         shoeItem.className = 'product-card';
@@ -41,31 +40,28 @@ async function displayShoes() {
             <div class="info-product">
                 <h2 class="product-title">${shoe.nombre}</h2>
                 <p>Sabor: ${shoe.sabor}</p>
-                <p class="product-price">Precio: ${shoe.precio}</p>
-                <p class="product-price">Nicotina: ${shoe.nicotina}</p>
+                <p class="product-precio">Precio: ${shoe.precio}</p>
+                <p class="product-nicotina">Nicotina: ${shoe.nicotina}</p>
                 <button class="add-to-cart">Añadir al carrito</button>
             </div>
         `;
         productList.appendChild(shoeItem);
 
-        // Añadir evento al botón de añadir al carrito
         const addToCartButton = shoeItem.querySelector('.add-to-cart');
         addToCartButton.addEventListener('click', () => openProductModal(shoe));
     });
 }
 
-// Función para abrir el modal con los detalles del producto
 function openProductModal(shoe) {
     const user = auth.currentUser;
     if (user) {
         const modal = new bootstrap.Modal(document.getElementById('productModal'));
         document.getElementById('modalProductTitle').textContent = shoe.nombre;
-        document.getElementById('modalProductBrand').textContent = `Sabor: ${shoe.sabor}`;
-        document.getElementById('modalProductPrice').textContent = `Precio: ${shoe.precio}`;
-        document.getElementById('modalProductDiscountPrice').textContent = `Nicotina: ${shoe.nicotina}`;
+        document.getElementById('modalProductSabor').textContent = `Sabor: ${shoe.sabor}`;
+        document.getElementById('modalProductPrecio').textContent = `Precio: ${shoe.precio}`;
+        document.getElementById('modalProductNicotina').textContent = `Nicotina: ${shoe.nicotina}`;
         document.getElementById('modalProductImage').src = shoe.imagen;
 
-        // Almacenar el ID del usuario en un atributo del botón
         const addToCartButton = document.getElementById('addToCartButton');
         addToCartButton.setAttribute('data-user-id', user.uid);
         addToCartButton.onclick = () => addToCart(shoe, user.uid);
@@ -75,7 +71,6 @@ function openProductModal(shoe) {
     }
 }
 
-// Función para agregar el producto al carrito
 async function addToCart(shoe, userId) {
     if (userId) {
         try {

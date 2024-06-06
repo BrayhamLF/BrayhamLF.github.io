@@ -24,7 +24,6 @@ import {
   where
 } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
-// Configuración de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyAoecY9UEZzrZx-k3E2TcstI3xbMVFgYkg",
   authDomain: "apiweblogin24g2.firebaseapp.com",
@@ -35,12 +34,10 @@ const firebaseConfig = {
   measurementId: "G-J9MNYKHY9J"
 };
 
-// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// Funciones de Autenticación
 export const registerauth = (email, password) =>
   createUserWithEmailAndPassword(auth, email, password);
 
@@ -97,7 +94,6 @@ export async function EliminarUsuario() {
   }
 }
 
-// Funciones para la colección "Usuarios"
 export const setregister = (nombres, apellidos, fecha, cedula, estado, rh, genero, telefono, direccion, email, tipoCuenta) => 
   setDoc(doc(db, "Usuarios", cedula), {  
     nombres, 
@@ -177,7 +173,6 @@ export async function actualizarUsuario(cedula, data) {
   }
 }
 
-// Funciones para la colección "Vape"
 export async function registrarVape(codigo, nombre, sabor, precio, nicotina, imagen) {
   try {
     const docRef = await addDoc(collection(db, 'Vape'), {
@@ -216,9 +211,9 @@ export async function eliminarProducto(docId) {
   if (window.confirm('¿Estás seguro de que quieres eliminar este producto? Esta acción es irreversible.')) {
     try {
       await deleteDoc(doc(db, 'Vape', docId));
-      console.log('Producto eliminado de Firestore');
+      console.log('Producto eliminado exitosamente');
     } catch (error) {
-      console.error('Error al eliminar el producto de Firestore:', error);
+      console.error('Error al eliminar el producto:', error);
       throw error;
     }
   }

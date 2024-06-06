@@ -10,10 +10,8 @@ async function handleSearch() {
     const shoes = await fetchShoes();
     const productList = document.getElementById('product-list');
 
-    // Limpiar la lista de productos
     productList.innerHTML = '';
 
-    // Filtrar los vapes según la consulta de búsqueda
     const filteredShoes = shoes.filter(shoe => shoe.nombre.toLowerCase().includes(query));
 
     if (filteredShoes.length > 0) {
@@ -34,12 +32,10 @@ async function handleSearch() {
             `;
             productList.appendChild(shoeItem);
 
-            // Añadir evento al botón de añadir al carrito
             const addToCartButton = shoeItem.querySelector('.add-to-cart');
             addToCartButton.addEventListener('click', () => handleAddToCart(shoe));
         });
     } else {
-        // Mostrar mensaje si no se encuentra ningún producto
         productList.innerHTML = '<p>No existe ningún producto con ese nombre</p>';
     }
 }
