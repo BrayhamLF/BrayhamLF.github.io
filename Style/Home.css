@@ -1,0 +1,217 @@
+/* tienda2.css */
+
+/* Estilo general para el cuerpo y el texto */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #d1c4e9, #b0bec5); /* Degradado de morado azulado a gris */
+    min-height: 100vh; /* Asegura que el degradado cubra toda la altura de la pantalla */
+    color: black;
+}
+
+/* Estilo del encabezado */
+.usuario {
+    background-color: #d1c4e9; /* Tono pastel de morado azulado */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #5c6bc0; /* Tono de morado azulado */
+}
+
+/* Estilo para el contenedor de los botones */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.custom-btn {
+    background-color: #5c6bc0; /* Tono de morado azulado */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #7986cb; /* Tono de morado azulado más claro */
+    color: white;
+}
+
+/* Estilo de la barra de búsqueda */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+#search-input {
+    padding: 10px;
+    border: 2px solid #5c6bc0; /* Tono de morado azulado */
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    border: 2px solid #5c6bc0; /* Tono de morado azulado */
+    border-left: none;
+    background-color: #5c6bc0; /* Tono de morado azulado */
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #7986cb; /* Tono de morado azulado más claro */
+    color: white;
+}
+
+/* Estilo para el botón de Cambiar Contraseña */
+#btnPassword {
+    background-color: #5c6bc0; /* Tono de morado azulado */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#btnPassword:hover {
+    background-color: #7986cb; /* Tono de morado azulado más claro */
+    color: white;
+}
+
+/* Estilo para el botón de Cerrar Sesión */
+#btnlogout {
+    background-color: #b71c1c; /* Rojo vino */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#btnlogout:hover {
+    background-color: #8b0000; /* Tono de rojo vino más oscuro */
+}
+
+/* Estilo para el botón de Eliminar Usuario */
+#btndelete {
+    background-color: #5c6bc0; /* Tono de morado azulado */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#btndelete:hover {
+    background-color: #7986cb; /* Tono de morado azulado más claro */
+    color: white;
+}
+
+/* Estilo para el botón de Ver Carrito */
+#btnCarrito {
+    background-color: #78909c; /* Gris azulado */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#btnCarrito:hover {
+    background-color: #546e7a; /* Tono de gris azulado más oscuro */
+    color: white;
+}
+
+/* Estilo del contenedor de los productos */
+.container-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilo de las tarjetas de productos */
+.product-card {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #5c6bc0; /* Tono de morado azulado */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    height: auto; /* Ajuste para que todas las tarjetas tengan la misma altura */
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card figure {
+    margin: 0;
+    padding: 0;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card figure img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.product-card .info-product {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.product-card .product-title {
+    color: black; /* Texto en negro */
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card .product-price {
+    color: #5c6bc0; /* Tono de morado azulado */
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.product-card .add-to-cart {
+    background-color: #5c6bc0; /* Tono de morado azulado */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.product-card .add-to-cart:hover {
+    background-color: #7986cb; /* Tono de morado azulado más claro */
+    color: white;
+}

@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #b0bec5; /* Gris azulado */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: Baskerville, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #78909c; /* Gris azulado más oscuro */
+    width: 90%;
+    max-width: 1200px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000; /* Texto en negro */
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-custom th, 
+.table-custom td {
+    border: 1px solid #78909c; /* Gris azulado más oscuro */
+    padding: 8px;
+    text-align: center;
+    color: #000; /* Texto en negro */
+}
+
+.table-custom th {
+    background-color: #556f7a; /* Gris azulado más oscuro */
+    color: white;
+}
+
+.table-custom tbody tr:nth-child(even) {
+    background-color: #b0bec5; /* Gris azulado */
+}
+
+.btn-primary {
+    background-color: #556f7a; /* Gris azulado más oscuro */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #78909c; /* Gris azulado más oscuro */
+}
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 0 10px #455a64; /* Gris azulado más oscuro */
+    color: #000; /* Texto en negro */
+}
+
+.modal-header {
+    background-color: #556f7a; /* Gris azulado más oscuro */
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.btn-close {
+    color: #fff;
+}
+
+.form-label {
+    color: #000; /* Texto en negro */
+}
+
+#togglePassword {
+    background-color: #556f7a; /* Gris azulado más oscuro */
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #2e7d32; /* Verde */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: #005005; /* Verde más oscuro */
+}

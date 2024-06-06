@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #bdd7e7, #a2c7e5); /* Degradado de azules menos intensos */
+    background-size: cover;
+    background-position: center;
+    color: #004e98; /* Tono de azul menos intenso */
+    font-family: Baskerville, serif;
+}
+
+.contenedor {
+    text-align: center;
+    background-color: rgb(255, 255, 255); 
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    height: 80vw;
+    max-height: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.contenedor h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #004e98; /* Tono azul menos intenso */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #004e98; /* Tono azul menos intenso */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; 
+}
+
+button:hover {
+    background-color: #003366; /* Tono azul menos intenso más oscuro */
+}
+
+#googlebtn,
+#facebooklogin {
+    width: 100%; 
+    font-size: 16px;
+}
+
+#googlebtn {
+    background-color: #004e98; /* Tono azul menos intenso */
+    margin-bottom: 10px; 
+}
+
+#googlebtn:hover {
+    background-color: #003366; /* Tono azul menos intenso más oscuro */
+}
+
+#facebooklogin {
+    background-color: #003366; /* Tono azul menos intenso más oscuro */
+    margin-bottom: 10px; 
+}
+
+#facebooklogin:hover {
+    background-color: #00264d; /* Tono azul menos intenso aún más oscuro */
+}
+
+.contenedor > div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; 
+}
